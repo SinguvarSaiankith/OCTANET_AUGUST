@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landing Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        header {
+            background: #333;
+            color: #fff;
+            padding: 1rem 0;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        #hero {
+            background: url('https://www.hdwallpapers.in/download/night_at_beach_4k_hd-HD.jpg/1200x600') no-repeat center center/cover;
+            color: #fff;
+            padding: 3rem 1rem;
+            text-align: center;
+            width: 100%;
+            min-height: 60vh;
+            box-sizing: border-box;
+            position: relative;
+        }
+
+        #hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        #hero p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+        }
+
+        #features {
+            display: flex;
+            flex-wrap: wrap;
+            margin: 0;
+            padding: 0;
+        }
+
+        .feature-item {
+            position: relative;
+            flex: 1 1 50%;
+            margin: 0;
+            padding: 0;
+        }
+
+        .feature-item img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .feature-item h3, .feature-item p {
+            position: absolute;
+            color: #fff;
+            margin: 0;
+            padding: 0.5rem;
+            background: rgba(0, 0, 0, 0.5);
+            box-sizing: border-box;
+            font-size: 1.5rem;
+        }
+
+        .feature-item h3 {
+            bottom: 2.5rem;
+            left: 0;
+            width: 100%;
+            text-align: center;
+        }
+
+        .feature-item p {
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            text-align: center;
+        }
+
+        .feature-item.full-width {
+            flex: 1 1 100%;
+            position: relative;
+        }
+
+        .feature-item.full-width img {
+            width: 100%;
+            height: auto;
+            max-height: 400px;
+            object-fit: cover;
+        }
+
+        .text-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            color: #fff;
+            padding: 1rem;
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            font-size: 2vw;
+        }
+
+        .text-overlay .title {
+            font-size: 3rem;
+            margin: 0;
+            color: #000;
+            text-align: center;
+            font-weight: bold;
+        }
+
+        .text-overlay .subtitle {
+            font-size: 2rem;
+            margin: 0;
+            text-align: center;
+        }
+
+        footer {
+            background: #333;
+            color: #fff;
+            text-align: center;
+            padding: 1rem 0;
+        }
+
+        .social-icons {
+            position: absolute;
+            bottom: 1rem;
+            right: 1rem;
+            display: flex;
+            gap: 1rem;
+        }
+
+        .social-icons a {
+            display: block;
+        }
+
+        .social-icons img {
+            width: 2rem;
+            height: 2rem;
+            object-fit: contain;
+        }
+
+        .contact-info {
+            margin-top: 2rem;
+        }
+
+        .contact-info a {
+            color: #fff;
+            text-decoration: none;
+        }
+    </style>
+    <script>
+        function goToHome() {
+            window.location.href = "https://octanet.in/";
+        }
+
+        function scrollToContact() {
+            document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="#home" onclick="goToHome()">Home</a>
+            <a href="#features">Features</a>
+            <a href="#contact" onclick="scrollToContact()">Contact</a>
+        </nav>
+    </header>
+
+    <section id="hero">
+        <h1>Welcome to Our Landing Page</h1>
+        <p>Discover amazing features and benefits.</p>
+        <div class="social-icons">
+            <a href="https://www.instagram.com/tech.octanet?igsh=bGFob2g2ZGU4dTRx" target="_blank">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram">
+            </a>
+            <a href="https://www.facebook.com" target="_blank">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="Facebook">
+            </a>
+        </div>
+    </section>
+
+    <section id="features">
+        <div class="feature-item">
+            <img src="https://live.staticflickr.com/4905/43925079340_16f93d43a5_h.jpg" alt="Feature 1 Image">
+            <div class="text-overlay">
+                <div class="title">Popular</div>
+                <div class="subtitle">Life is short; travel often and live fully.</div>
+            </div>
+        </div>
+        <div class="feature-item">
+            <img src="https://www.hdwallpapers.in/download/beautiful_lake_landscape_scenery_4k_8k-2560x1440.jpg" alt="Feature 2 Image">
+            <div class="text-overlay">
+                <div class="title">Latest</div>
+                <div class="subtitle">Travel light, live free, enjoy every step.</div>
+            </div>
+        </div>
+        <div class="feature-item full-width"> 
+            <img src="https://wallpapercave.com/wp/wp7050287.jpg" alt="Feature 3 Image">
+        </div>
+    </section>
+
+    <footer id="contact">
+        <p>Contact us at</p>
+        <div class="contact-info">
+            <p>Email: <a href="mailto:support@octanet.in">support@octanet.in</a></p>
+            <p>Phone: <a href="tel:+ 91 77890 01085">+91 77890 01085</a></p>
+        </div>
+    </footer>
+</body>
+</html>
